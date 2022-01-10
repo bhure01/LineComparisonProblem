@@ -4,7 +4,8 @@ import java.util.*;
 import java.lang.Math;
 
 public class LineComparisonProblem {
-    public static void main(String[] args) {
+
+    private void calculateLength() {
         // Object creation for Scanner class
         Scanner sc = new Scanner(System.in);
         double length[] = new double[2];
@@ -22,13 +23,16 @@ public class LineComparisonProblem {
             System.out.println("Length of line" + (i + 1) + ":" + length[i]);
         }
         // checking equality of 2 lines - comparing lengths of two lines
-        if (Objects.equals(length[0], length[1])) {
+        if (Objects.equals(length[1], length[2])) {
             System.out.println("The length of two lines are equal");
         } else if (length[1] > length[2]) {
             System.out.println("The Length of line 1 is greater than the length of line 2");
         } else {
             System.out.println("Length of line 2 is greater than the length of line 1");
-
         }
+    }
+    public static void main(String[] args) {
+        LineComparisonProblem lC = new LineComparisonProblem();
+        lC.calculateLength();
     }
 }
